@@ -5,12 +5,12 @@ services:
         ports:
             - "8000:8000"
         volumes:
-            - /Users/yurkin-rv/Documents/Jenkins/docker/nginx/conf.d:/etc/nginx/conf.d
+            - /mnt/c/Users/rombi/mydir/Jenkins/docker/nginx/conf.d:/etc/nginx/conf.d
         depends_on:
             - jenkins
     jenkins:
         build:
-            context: /Users/yurkin-rv/Documents/Jenkins/docker/deploment
+            context: /mnt/c/Users/rombi/mydir/Jenkins/docker/deploment
         environment:
           DOCKER_HOST: tcp://docker:2376
           DOCKER_CERT_PATH: /certs/client
