@@ -11,5 +11,6 @@ RUN add-apt-repository \
 RUN apt-get install groovy
 RUN apt-get install default-jre && apt-get install default-jdk
 RUN apt-get update && apt-get install -y docker-ce-cli
+
 USER jenkins
-RUN jenkins-plugin-cli --plugins blueocean:1.24.3
+RUN jenkins-plugin-cli --plugins blueocean:1.25.1
